@@ -1,0 +1,55 @@
+====================================================
+bankAccount
+====================================================
+- accountNumber : int
+- balance : double
+
++ setAccountNumber(number : int) : void
++ getAccountNumber() : int
++ getAccountBalance() : double
++ deposit(amount : double) : void
++ withdraw(amount : double) : void
++ print() : void
+
++ bankAccount()
++ bankAccount(accountNumber : int, balance : double)
+====================================================
+
+====================================================
+checkingAccount (inherits from bankAccount)
+====================================================
+- interestRate : double
+- minBalance : double
+- serviceCharges : double
+
++ setInterestRate(interestRate : double) : void
++ getInterestRate() : double
++ setminBalance(minBalance : double) : void
++ getminBalance() : double
++ setServiceCharges(serviceCharges : double) : void
++ getServiceCharges() : double
++ postInterest() : void
++ verifyBalance() : bool
++ deposit(amount : double) : void  <<override>>
++ withdraw(amount : double) : void <<override>>
++ print() : void <<override>>
+
++ checkingAccount()
++ checkingAccount(accountNumber : int, balance : double, interestRate : double,
+				  minBalance : double, serviceCharges : double)
+====================================================
+
+====================================================
+savingsAccount (inherits from bankAccount)
+====================================================
+- interestRate : double
+
++ setInterestRate(interestRate : double) : void
++ getInterestRate() : double
++ postInterest() : void
++ withdraw(amount : double) : void <<override>>
++ print() : void <<override>>
+
++ savingsAccount()
++ savingsAccount(accountNumber : int, balance : double, interestRate : double)
+====================================================
